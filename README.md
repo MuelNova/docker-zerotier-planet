@@ -1,4 +1,9 @@
-
+> 修改了部分脚本，将 planet 暴露到公网上供脚本使用
+## 使用方法
+### Windows
+修改 `join-windows.bat` 中的 YOUR_IP 为公网 IP，YOUR_NETWORK_ID 为网络 ID，使用管理员权限运行即可（防火墙开放 3444 端口）
+如果网络设置为 Public，脚本应该能自动输出 IP，如果为 Private，在 Controller 端设置 Authorized 后再次运行脚本应该可以看到 IP
+## 原 README
 QQ交流群：
 
 ![image](https://user-images.githubusercontent.com/51899048/221509739-7d039726-34a1-4174-b85f-2d0cbf07bd31.png)

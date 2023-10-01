@@ -63,10 +63,8 @@ function install() {
 
   echo "启动服务"
   for i in $(lsof -i:$port -t); do kill -2 $i; done
-  docker run -d -p $port:$port -p $port:$port/udp -p 3443:3443 --name $imageName --restart unless-stopped $imageName
-  docker cp zerotier-planet:/app/bin/planet /tmp/planet
+  docker run -d -p $port:$port -p $port:$port/udp -p 3443:3443 -p 3444:3444 --name $imageName --restart unless-stopped $imageName
 
-  echo "planet文件路径为 /tmp/planet"
   echo "planet server端口为: $port, 请在防火墙放行该端口的tcp和udp协议"
   echo "enjoy~"
 }
