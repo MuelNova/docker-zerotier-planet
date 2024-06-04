@@ -5,8 +5,7 @@ from re import M
 
 def get_moon():
     with open("/var/lib/zerotier-one/moon.json", "r") as f:
-        moon = json.load(f)
-        return moon
+        return json.load(f)
 
 
 def get_patch():
